@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://source.unsplash.com/1600x900/?wedding,flowers,pink') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(255, 182, 193, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff69b4;
+            opacity: 0;
+            animation: fadeIn 2s ease-in forwards;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #8b0000;
+            opacity: 0;
+            animation: fadeIn 3s ease-in forwards;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff1493;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #c71585;
+        }
+        .image {
+            width: 250px;
+            height: auto;
+            border-radius: 15px;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 4s ease-in forwards;
+            border: 5px solid #ff69b4;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приглашаем Вас на нашу свадьбу!</h1>
+        <p>Акдидар & Ваше Имя</p>
+        <p>Дата: 11 августа 2025 года</p>
+        <p>Время: 16:00</p>
+        <p>Место: Rixos President Astana</p>
+        <img class="image" src="https://apelsin-tur.ru/wp-content/uploads/2020/10/rixos-borovoe-kazahstan.jpg" alt="Свадебное фото">
+        <button class="btn" onclick="playMusic()">Включить музыку</button>
+        <audio id="weddingMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3"></audio>
+    </div>
+    
+    <script>
+        function playMusic() {
+            document.getElementById('weddingMusic').play();
+        }
+    </script>
+</body>
+</html>

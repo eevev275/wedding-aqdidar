@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадебное приглашение</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: url('https://source.unsplash.com/1600x900/?wedding,flowers,elegant') no-repeat center center/cover;
+            text-align: center;
+            color: #5a4636;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 245, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #4a3627;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #7a5d43;
+            font-style: italic;
+        }
+        .date {
+            font-size: 1.8rem;
+            color: #a67c52;
+            font-weight: bold;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #5a4636;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background: #a67c52;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #8c6848;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приглашение на свадьбу</h1>
+        <h2>Акдидар & Б</h2>
+        <p class="date">Суббота, 11 августа</p>
+        <p>16:00 - Торжественная регистрация</p>
+        <p>Rixos President Astana</p>
+        <p>18:00 - Праздничный ужин</p>
+        <button class="btn" onclick="playMusic()">Включить музыку</button>
+        <audio id="weddingMusic" src="https://www.bensound.com/bensound-music/bensound-romantic.mp3"></audio>
+    </div>
+    
+    <script>
+        function playMusic() {
+            document.getElementById('weddingMusic').play();
+        }
+    </script>
+</body>
+</html>
